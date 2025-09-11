@@ -13,8 +13,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 img_path = 'gingerbread.jpg'
-image = cv2.imread(img_path)
-
+gingerbread = cv2.imread(img_path)
 
 def threshold(image, th=None):
     """Returns a binarised version of given image, thresholded at given value.
@@ -50,12 +49,7 @@ def threshold(image, th=None):
 
     # Start thresholding
     ## WRITE YOUR CODE HERE
-    for height_index in range(shape[0]):
-        for width_index in range(shape[1]):
-            if image[height_index][width_index] > th:
-                binarised[height_index][width_index] = 255
-
-
+    binarised[image > th] = 255
 
     return binarised
 
