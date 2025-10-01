@@ -44,21 +44,22 @@ def image_sharpening(image_path):
     if inp not in ['1', '2']:
         raise ValueError("Invalid option. Please choose a number between 1 and 2.")
 
-    image = io.imread(image_path, as_gray=True)
-    
+    image = io.imread(image_path, as_gray=False)
+    plt.imshow(image, cmap='gray') 
+    plt.savefig(f'{save_path}Original_Image.png')
     if inp == '1':
         blurred = filters.gaussian(image, sigma=1)
         sharpened = image + (image - blurred)
-        plt.imshow(sharpened)
+        plt.imshow(sharpened, cmap='gray')
         plt.savefig(f'{save_path}Unsharp_Masking.png')
 
     if inp == '2':
         laplacian = filters.laplace(image)
-        sharpened = image - laplacian
-        plt.imshow(sharpened)
+        # sharpened = image - laplacian
+        plt.imshow(laplacian)
         plt.savefig(f'{save_path}Laplacian_Filter.png')
 
-
+image_sharpening('AthenIR.png')
 
 
 
