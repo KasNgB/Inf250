@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Rumex']
+
+roboflow:
+  workspace: in250-mandatory-3
+  project: inf250-vvyo1
+  version: 1
+  license: Private
+  url: https://app.roboflow.com/in250-mandatory-3/inf250-vvyo1/1
