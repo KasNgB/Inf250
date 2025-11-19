@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Rumex']
+
+roboflow:
+  workspace: inf250
+  project: inf250-docks-ntch5
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/inf250/inf250-docks-ntch5/dataset/3
