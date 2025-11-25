@@ -10,6 +10,7 @@ model.predict(
     imgsz=640,       # bump to 640 if smooth
     conf=0.4,
     save=True,
+    save_txt=True,
     project="results/"
     )
 
