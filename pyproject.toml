@@ -15,3 +15,8 @@ dependencies = [
     "scikit-image>=0.25.2",
     "scikit-learn>=1.7.2",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]
